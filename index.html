@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!----------------------------------------------------------------->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c1117" />
+
+  <title>LCAS公式サイト - ホーム</title>
+  <meta name="description" content="" />
+
+  <link rel="icon" href="assets/lcas-mark.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LCAS" />
+  <meta property="og:title" content="LCAS公式サイト" />
+  <meta property="og:description" content="ホームページ" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="assets/lcas-mark.svg" />
+  <!----------------------------------------------------------------->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 外部CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- デスクトップ版 (769px以上) -->
+  <link rel="stylesheet" href="css/desktop/index.css" media="screen and (min-width: 769px)">
+  <!-- モバイル版 (768px以下) -->
+  <link rel="stylesheet" href="css/mobile/index.css" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="css/compact.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="primary">LCAS</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="メニュー開閉">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav">
+        <!-- JS で nav.html の #header-menu が挿入されます -->
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ヒーローセクション -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-text">
+        <h1>
+          <span class="primary">LCAS</span>
+        </h1>
+        <p>LCASはDiscordを中心に活動するコミュニティです。</p>
+        <div class="hero-buttons">
+          <a href="https://discord.gg/reRxqAXSSG" class="hero-btn primary">
+            Discordに参加
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="discord-circle">
+          <i class="fab fa-discord"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <nav id="footer-nav">
+      <!-- JS で nav.html の #footer-menu が挿入されます -->
+    </nav>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

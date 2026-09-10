@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!----------------------------------------------------------------->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a9ceec" />
+
+  <title>LCAS公式サイト - DM爆撃BOT使い方</title>
+  <meta name="description" content="LCASのDM爆撃BOT使い方ガイド。50体のBotによる高速DM大量送信機能、コマンド使用方法、ライセンス取得手順を詳しく解説。Discordサーバーでの効果的な利用方法をご紹介。" />
+
+  <link rel="icon" href="assets/lcas-mark.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LCAS" />
+  <meta property="og:title" content="DM爆撃BOT使い方" />
+  <meta property="og:description" content="LCASのDM爆撃BOT使い方ガイド。50体のBotによる高速DM大量送信機能、コマンド使用方法、ライセンス取得手順を詳しく解説。" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <!----------------------------------------------------------------->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 外部CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- デスクトップ版 (769px以上) -->
+  <!-- デスクトップ版 (769px以上) -->
+  <link rel="stylesheet" href="css/desktop/dm.css?v=2" media="screen and (min-width: 769px)">
+  <!-- モバイル版 (768px以下) -->
+  <link rel="stylesheet" href="css/mobile/dm.css?v=2" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="css/compact.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        LCAS
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="メニュー開閉">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav"><!-- nav.html #header-menu --></nav>
+    </div>
+  </header>
+
+  <!-- 導入と使い方セクション -->
+  <section class="page-title-section">
+    <h2 class="page-title">DM爆撃Botガイド</h2>
+  </section>
+
+  <main class="tool-container">
+    <div class="dm-grid">
+      <section class="command-card">
+        <div class="command-card-header">
+          <h3>コマンド一覧</h3>
+        </div>
+        <div class="command-details">
+          <div class="command-item">
+            <code class="command-code">/dm_user [ユーザーID]</code>
+            <p>指定したユーザーIDに対して、50体のBotによるDM爆撃攻撃を開始します。即時実行され、ライセンスに応じた大量のメッセージが送信されます。</p>
+          </div>
+        </div>
+
+        <div class="license-info">
+          <h4>送信回数</h4>
+          <ul>
+            <li><strong>通常ライセンス</strong>：5,000件</li>
+            <li><strong>プレミアムライセンス</strong>：9,000件</li>
+          </ul>
+        </div>
+
+        <section class="license-acquisition-info small-card">
+          <h4>ライセンスの取得方法</h4>
+          <div class="license-type">
+            <h5>通常ライセンス</h5>
+            <ul>
+              <li>1ヶ月：500円</li>
+              <li>3ヶ月：1,500円</li>
+              <li>永久：3,000円</li>
+            </ul>
+          </div>
+          <div class="license-type">
+            <h5>プレミアムライセンス</h5>
+            <ul>
+              <li>通常ライセンス価格の2倍</li>
+            </ul>
+          </div>
+          <div class="license-type purchase-method">
+            <h5>購入方法</h5>
+            <p>Discordサーバーに参加して「つっくん」にフレンド申請を送って下さい。</p>
+            <div class="card-action">
+              <a href="https://discord.gg/cyvqWKSKn5" target="_blank" class="action-btn">
+                <i class="fab fa-discord"></i> Discordサーバーで購入
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <nav id="footer-nav">
+        <!-- JS で nav.html の #footer-menu が挿入されます -->
+      </nav>
+    </div>
+  </footer>
+
+  <!-- 外部JS -->
+  <script src="js/app.js"></script>
+  <script src="js/dm.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!----------------------------------------------------------------->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a9ceec" />
+
+  <title>LCAS公式サイト - 外部アプリBot解説</title>
+  <meta name="description" content="外部アプリ荒らしBot使い方" />
+
+  <link rel="icon" href="assets/lcas-mark.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LCAS" />
+  <meta property="og:title" content="外部アプリ荒らしBot使い方" />
+  <meta property="og:description" content="詳細はサイト内に記載" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <!----------------------------------------------------------------->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 外部CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- デスクトップ版 (769px以上) -->
+  <link rel="stylesheet" href="css/desktop/bot.css" media="screen and (min-width: 769px)">
+  <!-- モバイル版 (768px以下) -->
+  <link rel="stylesheet" href="css/mobile/bot.css" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="css/compact.css">
+</head>
+<body class="bot-external">
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">LCAS</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="メニュー開閉"><i class="fas fa-bars"></i></button>
+      <nav id="nav"><!-- nav.html #header-menu --></nav>
+    </div>
+  </header>
+
+  <section class="page-title-section"><h2 class="page-title">外部アプリ版 Bot解説</h2></section>
+
+  <main class="tool-container bot-guide">
+    <div class="back-nav" id="back-nav"><a href="bot.html" class="back-btn">← モード選択に戻る</a></div>
+    <div class="commands-comparison">
+      <section class="command-section external-commands active">
+        <div class="command-card">
+          <div class="command-card-header"><h3>外部アプリ版の操作</h3></div>
+          <div class="command-overview"><p>外部アプリからサーバー操作を行うためのコマンドです。</p><ul><li>通常攻撃は実行チャンネルが対象</li><li>広範囲の操作にはTOKEN設定が必要</li></ul></div>
+          <div class="command-list-wrap">
+            <h4>コマンド一覧</h4>
+            <ul class="command-list">
+              <li class="command-item"><strong>/通常攻撃</strong><button class="detail-toggle" type="button" aria-expanded="false" aria-label="通常攻撃の詳細を表示">+</button><div class="command-detail" hidden><p>実行したチャンネルに対してスパムを開始します。</p></div></li>
+              <li class="command-item"><strong>/操作</strong><button class="detail-toggle" type="button" aria-expanded="false" aria-label="操作の詳細を表示">+</button><div class="command-detail" hidden><p>対象サーバーの全チャンネルに対してスパムを実行します。TOKEN設定が必要です。</p></div></li>
+              <li class="command-item"><strong>/TOKEN設定</strong><button class="detail-toggle" type="button" aria-expanded="false" aria-label="TOKEN設定の詳細を表示">+</button><div class="command-detail" hidden><p>拡張機能を有効にします。スラッシュコマンドを全チャンネルへ実行する操作などに使用します。</p></div></li>
+              <li class="command-item"><strong>/ログアウト</strong><button class="detail-toggle" type="button" aria-expanded="false" aria-label="ログアウトの詳細を表示">+</button><div class="command-detail" hidden><p>ログイン済みのTOKENからログアウトします。</p></div></li>
+            </ul>
+          </div>
+          <div class="install-guide"><h4>導入</h4><p>導入URLは公式Discordで案内しています。</p><p class="install-note"><a href="https://discord.gg/cyvqWKSKn5" target="_blank" rel="noopener" class="install-link">公式Discordへ参加</a></p></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer><div class="container"><nav id="footer-nav"><!-- JS で nav.html の #footer-menu が挿入されます --></nav></div></footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/bot.js"></script>
+</body>
+</html>

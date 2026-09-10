@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!----------------------------------------------------------------->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a9ceec" />
+
+  <title>LCAS公式サイト - 生存確認</title>
+  <meta name="description" content="Discordで活動する多目的グループ“LCAS”の公式サイトです。" />
+
+  <link rel="icon" href="assets/lcas-mark.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="LCAS" />
+  <meta property="og:title"       content="生存確認" />
+  <meta property="og:description" content="" />
+  <meta property="og:url"         content="" />
+  <meta property="og:image"       content="" />
+<!----------------------------------------------------------------->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 外部CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- デスクトップ版 (769px以上) -->
+  <link rel="stylesheet" href="css/desktop/status.css" media="screen and (min-width: 769px)">
+  <!-- モバイル版 (768px以下) -->
+  <link rel="stylesheet" href="css/mobile/status.css" media="screen and (max-width: 768px)">
+
+  <link rel="stylesheet" href="css/compact.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        LCAS
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="メニュー開閉">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav"><!-- nav.html #header-menu --></nav>
+    </div>
+  </header>
+
+  <section class="page-title-section">
+    <h1 class="page-title">LCAS Status</h1>
+  </section>
+
+  <main class="status-container">
+        <p id="status-message" class="status">取得中...</p>
+        <iframe
+            id="discord-widget"
+            src="https://discord.com/widget?id=1054832544845135934&theme=dark"
+            width="100%" height="400"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+        </iframe>
+
+        <div class="sns-icons">
+            <a href="https://discord.gg/reRxqAXSSG" aria-label="Discord Invite" target="_blank">
+                <img src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://discord.com/&size=256" alt="Discord">
+            </a>
+            <a href="https://t.me/Freeze_Axis" aria-label="Telegram" target="_blank">
+                <img src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://web.telegram.org/&size=256" alt="Telegram">
+            </a>
+            <a href="https://freeze-axis.github.io/page/" aria-label="GitHub" target="_blank">
+                <img src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://github.com/&size=256" alt="GitHub">
+            </a>
+        </div>
+    </main>
+
+  <!-- フッター -->
+  <footer>
+    <nav id="footer-nav"><!-- nav.html #footer-menu --></nav>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/status.js"></script>
+</body>
+</html>

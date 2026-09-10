@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!----------------------------------------------------------------->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a9ceec" />
+
+  <title>LCAS公式サイト - ツール一覧</title>
+  <meta name="description" content="Discordコミュニティのための高品質ツール。サーバー管理、スパム対策、自動化ツールなど、あらゆるニーズに対応。" />
+
+  <link rel="icon" href="assets/lcas-mark.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LCAS" />
+  <meta property="og:title" content="ツール一覧" />
+  <meta property="og:description" content="LCAS" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="assets/lcas-mark.svg" />
+  <!----------------------------------------------------------------->
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 外部CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- デスクトップ版 (769px以上) -->
+  <link rel="stylesheet" href="css/desktop/tools.css" media="screen and (min-width: 769px)">
+  <!-- モバイル版 (768px以下) -->
+  <link rel="stylesheet" href="css/mobile/tools.css" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="css/compact.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        LCAS
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="メニュー開閉">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav"><!-- nav.html #header-menu --></nav>
+    </div>
+  </header>
+
+  <!-- ツール一覧セクション -->
+  <section class="page-title-section">
+    <h2 class="page-title">利用可能なツール</h2>
+  </section>
+
+  <!-- メインコンテンツ -->
+  <main class="tool-container">
+    <!-- タブ切り替えボタン -->
+    <div class="tool-tabs">
+      <button class="tool-tab active" data-tab="raiding">
+        荒らしツール
+      </button>
+      <button class="tool-tab" data-tab="other">
+        その他ツール
+      </button>
+    </div>
+    
+    <!-- 荒らしツールセクション -->
+    <section id="raiding-tools" class="tool-section active">
+      <div class="tools-grid">
+        <!-- サーバーRaider -->
+        <div class="tool-card">
+          <h3>サーバーRaider</h3>
+          <p>高速かつ効率的なサーバー襲撃ツール</p>
+          <a href="https://freeze-axis.github.io/raider" class="tool-btn" target="_blank">
+            ツールを開く
+          </a>
+        </div>
+        
+        <!-- DMグループスパム -->
+        <div class="tool-card">
+          <h3>DMグループスパム</h3>
+          <p>ユーザーをDMグループに強制追加するスパムツール</p>
+          <a href="https://freeze-axis.github.io/add_group" class="tool-btn" target="_blank">
+            ツールを開く
+          </a>
+        </div>
+        
+        <!-- リアクションスパム -->
+        <div class="tool-card">
+          <h3>リアクションスパム</h3>
+          <p>メッセージに自動でリアクションを追加するツール</p>
+          <a href="https://freeze-axis.github.io/reaction_tool/" class="tool-btn" target="_blank">
+            ツールを開く
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- その他ツールセクション -->
+    <section id="other-tools" class="tool-section">
+      <div class="tools-grid">
+        <!-- 招待URL厳選ツール -->
+        <div class="tool-card">
+          <h3>招待URL厳選ツール</h3>
+          <p>Discordサーバーの招待URLを生成。厳選目的での使用を想定。</p>
+          <a href="https://freeze-axis.github.io/invite_gen/" class="tool-btn" target="_blank">
+            ツールを開く
+          </a>
+        </div>
+        
+        <!-- DMグループ退出ツール -->
+        <div class="tool-card">
+          <h3>DMグループ退出ツール</h3>
+          <p>不要なDMグループから素早く一括退出できるツール。迷惑なグループからの脱出にぴったり。</p>
+          <a href="https://freeze-axis.github.io/dm_leave/" class="tool-btn" target="_blank">
+            ツールを開く
+          </a>
+        </div>
+        
+        <!-- フォント変換ツール -->
+        <div class="tool-card">
+          <h3>フォント変換ツール</h3>
+          <p>テキストを特殊なフォントスタイルに変換</p>
+          <a href="https://freeze-axis.github.io/font_editor/" class="tool-btn" target="_blank">
+            ツールを開く
+          </a>
+        </div>
+        
+        <!-- メッセージ削除ツール -->
+        <div class="tool-card">
+          <h3>メッセージ削除ツール</h3>
+          <p>不要なメッセージを一括で削除できるツール</p>
+          <a href="https://freeze-axis.github.io/message_delete/" class="tool-btn" target="_blank">
+            ツールを開く
+          </a>
+        </div>
+        
+        <!-- Discord複数アカウント管理 -->
+        <div class="tool-card">
+          <h3>Discord複数アカウント管理</h3>
+          <p>複数のDiscordアカウントを効率的に管理できるGreasyforksスクリプト</p>
+          <a href="https://greasyfork.org/ja/scripts/537944-discord%E8%A4%87%E6%95%B0%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E7%AE%A1%E7%90%86" class="tool-btn" target="_blank">
+            Greasy Forkで開く
+          </a>
+        </div>
+        
+        <!-- DiscordTOKEN取得 -->
+        <div class="tool-card">
+          <h3>DiscordTOKEN取得</h3>
+          <p>DiscordのTOKNを取得できるGreasyforksスクリプト</p>
+          <a href="https://greasyfork.org/ja/scripts/538421-token%E5%8F%96%E5%BE%97" class="tool-btn" target="_blank">
+            Greasy Forkで開く
+          </a>
+        </div>
+      </div>
+    </section>
+    
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <nav id="footer-nav"><!-- nav.html #footer-menu --></nav>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/tools.js"></script>
+</body>
+</body>
+</html>

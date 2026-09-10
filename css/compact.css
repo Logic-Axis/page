@@ -1,0 +1,498 @@
+/* compact.css - 全ページ共通のコンパクト密度 */
+
+.license-container,
+.status-container {
+  width: calc(100% - 2rem);
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.tools-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.tool-card {
+  min-height: 0;
+  padding: 1rem;
+  text-align: left;
+}
+
+.tools-grid .tool-card {
+  min-width: 0;
+  min-height: 180px;
+}
+
+.tool-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.tool-card p {
+  margin-bottom: 0.75rem;
+}
+
+.tool-card .tool-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+}
+
+.extension-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0.65rem;
+  min-height: 0;
+  text-align: left;
+}
+
+.extension-card h3 {
+  margin: 0;
+  color: var(--clr-accent);
+  font-size: 1.2rem;
+}
+
+.extension-card p {
+  margin: 0 0 auto;
+  color: rgba(235, 246, 255, 0.82);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.extension-card .tool-btn {
+  align-self: flex-start;
+}
+
+.extension-card .tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(99, 230, 190, 0.7);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+  color: var(--clr-bg);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(99, 230, 190, 0.18);
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+}
+
+.extension-card .tool-btn:hover,
+.extension-card .tool-btn:focus-visible {
+  color: var(--clr-bg);
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 230, 190, 0.3);
+}
+
+.bot-guide {
+  max-width: 860px;
+}
+
+.bot-guide .back-nav {
+  margin-bottom: 0.75rem;
+}
+
+.bot-guide .command-section {
+  padding: 0;
+}
+
+.bot-guide .command-card {
+  width: auto;
+  margin: 0;
+  padding: 1rem;
+}
+
+.bot-guide .command-overview,
+.bot-guide .command-list-wrap,
+.bot-guide .install-guide {
+  padding: 0.75rem;
+}
+
+.bot-guide .command-overview {
+  margin-bottom: 0.75rem;
+}
+
+.bot-guide .command-list-wrap {
+  margin-top: 0.75rem;
+}
+
+.bot-guide .command-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+}
+
+.bot-guide .command-item strong {
+  margin: 0;
+}
+
+.bot-guide .detail-toggle {
+  position: static;
+  flex: 0 0 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0;
+  border: 1px solid rgba(99, 230, 190, 0.35);
+  border-radius: 6px;
+  background: rgba(99, 230, 190, 0.08);
+  color: var(--clr-accent);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.bot-guide .command-detail {
+  flex-basis: 100%;
+  margin-top: 0.25rem;
+}
+
+.bot-guide .command-item:has(.command-detail:not([hidden])) {
+  flex-wrap: wrap;
+}
+
+.extensions-note {
+  display: block;
+  padding: 0;
+}
+
+.install-summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.65rem 0.85rem;
+  color: var(--clr-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.install-summary::-webkit-details-marker {
+  display: none;
+}
+
+.install-summary::after {
+  content: '+';
+  float: right;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.extensions-note[open] .install-summary::after {
+  content: '-';
+}
+
+.extensions-note .note-content {
+  padding: 0 0.85rem 0.85rem;
+}
+
+.license-container,
+.status-container {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mode-selection,
+.tools-grid,
+.dm-grid,
+.extensions-grid {
+  gap: 1rem;
+}
+
+.mode-selection {
+  margin-bottom: 1rem;
+}
+
+.mode-link,
+.tool-card,
+.extension-card,
+.command-card,
+.license-section {
+  padding: 1rem;
+}
+
+.mode-icon,
+.tool-icon {
+  width: 56px;
+  height: 56px;
+  font-size: 1.8rem;
+}
+
+.mode-icon {
+  margin-right: 1rem;
+}
+
+.mode-title,
+.tool-card h3 {
+  font-size: 1.35rem;
+}
+
+.mode-description,
+.tool-card p,
+.command-card p,
+.command-card ul,
+.command-card dl {
+  line-height: 1.45;
+}
+
+.command-section,
+.command-card,
+.page-intro,
+.extensions-intro,
+.extensions-note,
+.install-panel {
+  border-radius: 10px;
+}
+
+.command-section,
+.page-intro,
+.extensions-intro,
+.extensions-note {
+  padding: 0.85rem;
+}
+
+.section-header,
+.services-header {
+  margin-bottom: 1rem;
+}
+
+.command-card-header {
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.5rem;
+}
+
+.command-card-header h3,
+.section-header h3 {
+  font-size: 1.2rem;
+}
+
+.command-item,
+.install-guide {
+  padding: 0.8rem;
+}
+
+.command-details,
+.license-info,
+.restriction-info {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.feature-list li,
+.license-list li {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.tool-tabs {
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
+.tool-tab,
+.tool-btn,
+.extension-btn {
+  padding: 0.55rem 1.25rem;
+}
+
+.tool-card {
+  padding: 1rem;
+}
+
+.tool-card .tool-icon {
+  margin-bottom: 0.75rem;
+}
+
+.tool-card p {
+  margin-bottom: 0.75rem;
+}
+
+.extensions-intro h3,
+.note-content h4 {
+  margin-bottom: 0.4rem;
+}
+
+.license-header {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .license-container,
+  .status-container {
+    width: calc(100% - 1rem);
+    max-width: 1080px;
+  }
+
+  .license-container,
+  .status-container {
+    padding: 0.75rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    margin: 0.75rem 0;
+  }
+
+  .tools-grid .tool-card {
+    min-height: 0;
+  }
+
+  .tool-card {
+    padding: 0.75rem;
+  }
+
+  .tool-card .tool-btn {
+    align-self: stretch;
+  }
+
+  .extension-card .tool-btn {
+    align-self: stretch;
+  }
+
+  .bot-guide {
+    width: calc(100% - 1rem);
+  }
+
+  .mode-selection,
+  .tools-grid,
+  .dm-grid,
+  .extensions-grid {
+    gap: 0.75rem;
+  }
+
+  .mode-link,
+  .tool-card,
+  .extension-card,
+  .command-card,
+  .license-section {
+    padding: 0.75rem;
+  }
+
+  .mode-icon,
+  .tool-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .mode-title,
+  .tool-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .tool-tab,
+  .tool-btn,
+  .extension-btn {
+    padding: 0.45rem 0.9rem;
+  }
+
+  .install-summary {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .extensions-note .note-content {
+    padding: 0 0.7rem 0.7rem;
+  }
+}
+
+/* ツールページ基準のカード共通仕様 */
+.tools-grid,
+.extensions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.tools-grid .tool-card,
+.extensions-grid .extension-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 180px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.tools-grid .tool-card:hover,
+.extensions-grid .extension-card:hover {
+  transform: translateY(-3px);
+}
+
+.tools-grid .tool-card h3,
+.extensions-grid .extension-card h3 {
+  margin: 0 0 0.4rem;
+  color: var(--clr-accent);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  letter-spacing: 0.05em;
+}
+
+.tools-grid .tool-card p,
+.extensions-grid .extension-card p {
+  flex-grow: 1;
+  margin: 0 0 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.tools-grid .tool-btn,
+.extensions-grid .tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-accent) 100%);
+  color: var(--clr-bg);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(90, 143, 192, 0.4);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tools-grid .tool-btn:hover,
+.tools-grid .tool-btn:focus-visible,
+.extensions-grid .tool-btn:hover,
+.extensions-grid .tool-btn:focus-visible {
+  color: var(--clr-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(90, 143, 192, 0.6);
+}
+
+@media (max-width: 768px) {
+  .tools-grid,
+  .extensions-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 0.75rem 0;
+  }
+
+  .tools-grid .tool-card,
+  .extensions-grid .extension-card {
+    min-height: 0;
+    padding: 0.75rem;
+  }
+
+  .tools-grid .tool-btn,
+  .extensions-grid .tool-btn {
+    align-self: stretch;
+  }
+}

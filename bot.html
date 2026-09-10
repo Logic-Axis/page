@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!----------------------------------------------------------------->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a9ceec" />
+
+  <title>LCAS公式サイト - 荒らしBot使い方</title>
+  <meta name="description" content="LCAS公式サイトの荒らしBot導入ガイド。外部アプリ版とNuke版から選択できます。" />
+
+  <link rel="icon" href="assets/lcas-mark.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LCAS" />
+  <meta property="og:title" content="荒らしBot使い方" />
+  <meta property="og:description" content="LCAS公式サイトの荒らしBot導入ガイド。外部アプリ版とNuke版を1ページで確認できます。" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <!----------------------------------------------------------------->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 外部CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- デスクトップ版 (769px以上) -->
+  <link rel="stylesheet" href="css/desktop/bot.css" media="screen and (min-width: 769px)">
+  <!-- モバイル版 (768px以下) -->
+  <link rel="stylesheet" href="css/mobile/bot.css" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="css/compact.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        LCAS
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="メニュー開閉">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="nav"><!-- nav.html #header-menu --></nav>
+    </div>
+  </header>
+
+  <!-- 導入と使い方セクション -->
+  <section class="page-title-section">
+    <h2 class="page-title">荒らしBot導入ガイド</h2>
+  </section>
+
+  <main class="tool-container">
+    <!-- モード選択リスト（ツール/拡張タイプ） -->
+    <div class="mode-selection" id="mode-list">
+      <div class="mode-card external-card">
+        <a href="bot-external.html" class="mode-link">
+          <div class="mode-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="mode-content">
+            <h3 class="mode-title">外部アプリ版</h3>
+            <p class="mode-description">マイアプリに追加で動作</p>
+          </div>
+          <div class="mode-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="mode-card nuke-card">
+        <a href="bot-nuke.html" class="mode-link">
+          <div class="mode-icon">
+            <i class="fas fa-skull-crossbones"></i>
+          </div>
+          <div class="mode-content">
+            <h3 class="mode-title">Nuke版</h3>
+            <p class="mode-description">サーバーに追加で動作</p>
+          </div>
+          <div class="mode-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <nav id="footer-nav">
+        <!-- JS で nav.html の #footer-menu が挿入されます -->
+      </nav>
+    </div>
+  </footer>
+
+  <!-- 外部JS -->
+  <script src="js/app.js"></script>
+  <script src="js/bot.js"></script>
+</body>
+</html>

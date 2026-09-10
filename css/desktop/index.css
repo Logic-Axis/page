@@ -1,0 +1,234 @@
+/* index-desktop.css - index.html デスクトップ版スタイル */
+
+/*============================================================================
+  ヒーローセクション（カスタムスタイル）
+============================================================================*/
+.hero-section {
+  background: radial-gradient(circle at 78% 24%, rgba(99, 230, 190, 0.14), transparent 30%), var(--clr-gradient);
+  padding: 42px 0 28px;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.25em;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  color: var(--clr-text);
+}
+
+.hero-text h1 .primary {
+  color: var(--clr-accent);
+  text-shadow: 0 0 20px rgba(99, 230, 190, 0.35);
+}
+
+.hero-text p {
+  font-size: 1em;
+  color: #b6c8cb;
+  margin-bottom: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-btn {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.08em;
+  border-radius: 10px;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn.primary {
+  background: var(--clr-link);
+  color: #0c1117;
+  box-shadow: 0 2px 12px rgba(184, 243, 107, 0.2);
+}
+
+.hero-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(184, 243, 107, 0.35);
+}
+
+.hero-btn.secondary {
+  background: #fff;
+  color: #222;
+  border: 1px solid #e3eaf3;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.hero-btn.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+  flex: 1 1 320px;
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discord-circle {
+  width: 230px;
+  height: 230px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #0f6b78, #63e6be);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 40px rgba(99, 230, 190, 0.22);
+}
+
+.discord-circle i {
+  color: #fff;
+  font-size: 7.5em;
+}
+
+/*============================================================================
+  アニメーション
+============================================================================*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/*============================================================================
+  レスポンシブ調整 (992px以上)
+============================================================================*/
+@media (max-width: 992px) {
+  .hero-section .container {
+    gap: 30px;
+  }
+  .hero-text h1 {
+    font-size: 2.2em;
+  }
+  .discord-circle {
+    width: 250px;
+    height: 250px;
+  }
+  .discord-circle i {
+    font-size: 8em;
+  }
+}
+
+/* サービスカード */
+.services-section {
+  background: #090e13;
+  padding: 40px 0 52px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.services-header h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.services-header p {
+  color: #b8c4d4;
+  font-size: 1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #232a33, #1c232c);
+  border: 1px solid rgba(99, 230, 190, 0.2);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(99, 230, 190, 0.6);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  background: rgba(99, 230, 190, 0.1);
+  border: 1px solid rgba(99, 230, 190, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--clr-accent);
+}
+
+.service-card h4 {
+  color: #f8fbff;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #c3d1e3;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.service-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(99, 230, 190, 0.4);
+  background: rgba(18, 27, 36, 0.9);
+  color: #eaf8ff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+  background: linear-gradient(135deg, #0f6b78, #63e6be);
+  border-color: rgba(99, 230, 190, 0.8);
+  color: #fff;
+}
+

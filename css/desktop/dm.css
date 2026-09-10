@@ -1,0 +1,384 @@
+/* dm-desktop.css - dm.html デスクトップ版スタイル */
+
+/* ページタイトルセクション */
+
+/* コマンドセクション */
+.command-section {
+  background: linear-gradient(135deg, rgba(42, 45, 45, 0.5), rgba(42, 45, 45, 0.3));
+  border: 1px solid rgba(129, 212, 250, 0.15);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  transition: all 0.3s ease;
+  margin-top: var(--spacing-lg);
+}
+
+.command-section:hover {
+  border-color: rgba(129, 212, 250, 0.4);
+  background: linear-gradient(135deg, rgba(42, 45, 45, 0.7), rgba(42, 45, 45, 0.5));
+}
+
+/* セクションヘッダー */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  letter-spacing: 0.05em;
+}
+
+.section-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin-top: var(--spacing-xs);
+}
+
+/* tool-container 共通 */
+.tool-container {
+  max-width: 1080px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.page-intro {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: rgba(81, 212, 250, 0.06);
+  border: 1px solid rgba(129, 212, 250, 0.2);
+  border-radius: 16px;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.7;
+}
+
+.dm-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.command-card {
+  background: var(--clr-card);
+  border: 1px solid rgba(129, 212, 250, 0.18);
+  border-radius: 18px;
+  padding: 1.4rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.command-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+.command-card-header {
+  border-bottom: 1px solid rgba(129, 212, 250, 0.16);
+  margin-bottom: 1rem;
+  padding-bottom: 0.7rem;
+}
+
+.command-card-header h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--clr-accent);
+}
+
+/* コマンド一覧の左にあるアイコンを非表示にする */
+/* アイコンはHTMLから削除したため、CSSによる非表示ルールは不要 */
+
+.command-card p,
+.command-card ul,
+.command-card dl {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.command-card ul,
+.command-card dl {
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 0.6rem 0 0.6rem 1.8rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-list li:before {
+  content: '⚡';
+  position: absolute;
+  left: 0;
+  color: var(--clr-accent);
+}
+
+.command-card dt {
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+
+.command-card dd {
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 新しいコマンドセクションスタイル */
+.command-details {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(129, 212, 250, 0.15);
+}
+
+.command-item {
+  background: linear-gradient(135deg, rgba(74, 124, 176, 0.1), rgba(129, 212, 250, 0.05));
+  border-left: 4px solid var(--clr-accent);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.command-code {
+  display: block;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--clr-accent);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  word-break: break-word;
+  margin-bottom: 0.9rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.command-item p {
+  margin: 0.5rem 0 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.license-info {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(81, 212, 250, 0.08);
+  border-radius: 8px;
+  border-left: 4px solid var(--clr-primary);
+}
+
+.license-info h4 {
+  margin: 0 0 0.8rem 0;
+  color: var(--clr-accent);
+  font-size: 1.1rem;
+}
+
+.license-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.license-info li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.license-info li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--clr-accent);
+  font-weight: bold;
+}
+
+.license-acquisition-info.small-card,
+.license-info {
+  padding: 0.95rem;
+  border-radius: 14px;
+  background: rgba(69, 230, 111, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+  margin: 0.9rem 0;
+}
+
+.license-acquisition-info.small-card {
+  border-left: 4px solid rgba(69, 230, 111, 0.6);
+}
+
+.license-info {
+  background: rgba(81, 212, 250, 0.08);
+  border-left: 4px solid var(--clr-primary);
+}
+
+.license-acquisition-info.small-card .license-type {
+  margin-bottom: 0.75rem;
+}
+
+.license-acquisition-info.small-card .license-type h5 {
+  font-size: 0.95rem;
+}
+
+.license-acquisition-info.small-card .license-type p {
+  font-size: 0.9rem;
+  padding-left: 0.45rem;
+}
+
+.restriction-info {
+  padding: 1rem;
+  background: rgba(255, 152, 0, 0.08);
+  border-radius: 8px;
+  border-left: 4px solid rgba(255, 152, 0, 0.6);
+}
+
+.restriction-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.restriction-info i {
+  color: rgba(255, 152, 0, 0.8);
+  font-size: 1.2rem;
+}
+
+.license-acquisition-info {
+  padding: 1rem;
+  background: rgba(69, 230, 111, 0.08);
+  border-radius: 16px;
+  border-left: 4px solid rgba(69, 230, 111, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+  margin-top: 1rem;
+}
+
+.license-acquisition-info.small-card {
+  padding: 0.95rem;
+  background: rgba(69, 230, 111, 0.08);
+  border-radius: 12px;
+  border-left: 4px solid rgba(69, 230, 111, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+  margin: 1rem 0 1.3rem;
+}
+
+.license-acquisition-info.small-card .license-type {
+  margin-bottom: 0.75rem;
+}
+
+.license-acquisition-info.small-card .license-type h5 {
+  font-size: 0.95rem;
+}
+
+.license-acquisition-info.small-card .license-type p {
+  font-size: 0.9rem;
+  padding-left: 0.45rem;
+}
+
+.license-acquisition-info h4 {
+  margin: 0 0 1rem 0;
+  color: var(--clr-link);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.license-acquisition-info h4:before {
+  content: '📋';
+  font-size: 1.2rem;
+}
+
+.license-type {
+  margin-bottom: 1rem;
+}
+
+.license-type:last-child {
+  margin-bottom: 0;
+}
+
+.license-type h5 {
+  margin: 0 0 0.5rem 0;
+  color: var(--clr-accent);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.license-type p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  padding-left: 0.5rem;
+  border-left: 2px solid rgba(129, 212, 250, 0.3);
+}
+
+.page-action {
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+.page-action .action-btn {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.95rem 1.2rem;
+  background: linear-gradient(90deg, #4752c4 0%, #5865f2 45%, #7289da 100%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.95rem 1.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  box-shadow: 0 8px 24px rgba(10, 38, 75, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.page-action .action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(10, 38, 75, 0.45);
+  filter: brightness(1.05);
+}
+
+.license-acquisition-info .card-action {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+
+.license-acquisition-info .card-action .action-btn,
+.card-action .action-btn {
+  width: auto;
+  max-width: 320px;
+  text-decoration: none;
+}
+
+.page-action .action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(10, 38, 75, 0.35);
+}
+

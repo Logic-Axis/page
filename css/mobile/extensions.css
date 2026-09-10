@@ -1,0 +1,482 @@
+/* extensions-mobile.css - extensions.html モバイル版スタイル (max-width: 768px) */
+
+/* 拡張機能ページ特有のスタイル */
+.tool-container {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(42, 45, 45, 0.7) 0%, rgba(30, 33, 33, 0.8) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(129, 212, 250, 0.1);
+  border: 1px solid rgba(129, 212, 250, 0.2);
+  backdrop-filter: blur(10px);
+  margin-bottom: 3rem;
+}
+
+main.tool-container {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* 拡張機能紹介セクション */
+.extensions-intro {
+  text-align: center;
+  margin-bottom: 1.3rem;
+  padding: 1rem;
+  background: rgba(34, 40, 50, 0.92);
+  border-radius: 12px;
+  border: 1px solid rgba(129, 212, 250, 0.16);
+  position: relative;
+  overflow: hidden;
+}
+
+.extensions-intro::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle, rgba(129, 212, 250, 0.08) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.extensions-intro h3 {
+  font-size: 1.2rem;
+  color: var(--clr-accent);
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.extensions-intro p {
+  font-size: 0.95rem;
+  color: rgba(235, 246, 255, 0.9);
+  margin: 0;
+  line-height: 1.45;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* 拡張機能グリッド */
+.extensions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+/* 拡張機能カード */
+.extension-card {
+  background: rgba(18, 22, 32, 0.98);
+  border: 1px solid rgba(99, 230, 190, 0.45);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 2px 8px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: visible;
+  min-height: 70px;
+}
+
+.extension-card::before {
+  display: none;
+}
+
+.extension-card:hover {
+  transform: none;
+  border-color: rgba(99, 230, 190, 0.85);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03), 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* 拡張機能コンテンツ */
+.extension-content {
+  flex: 1 1 auto;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.extension-title {
+  font-size: clamp(0.72rem, 3.6vw, 1rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
+  min-width: 0;
+}
+
+
+
+/* 拡張機能アクション */
+.extension-actions {
+  margin: 0;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.extension-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  color: var(--clr-bg);
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.82rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  width: auto;
+  min-width: 4.4rem;
+  white-space: nowrap;
+}
+
+/* no hover or focus effect on mobile open buttons */
+.extension-btn:hover,
+.extension-btn:focus,
+.extension-btn:active {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  box-shadow: none;
+  transform: none;
+  color: var(--clr-bg);
+  outline: none;
+}
+
+/* 注意書きセクション */
+.extensions-note {
+  background: rgba(30, 35, 45, 0.92);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem 0.95rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.extensions-note .note-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.extensions-note .install-select-wrapper,
+.extensions-note .tab-content {
+  width: 100%;
+}
+
+
+.note-content h4 {
+  font-size: 1.1rem;
+  color: #ff9800;
+  margin: 0 0 0.45rem;
+  font-weight: 700;
+}
+
+.note-content p {
+  color: rgba(235, 246, 255, 0.9);
+  margin: 0 0 0.9rem;
+  line-height: 1.45;
+  font-size: 0.88rem;
+}
+
+.note-content h5 {
+  font-size: 1rem;
+  color: #ff9800;
+  margin: 1rem 0 0.45rem;
+  font-weight: 600;
+}
+
+.note-content h6 {
+  font-size: 0.95rem;
+  color: #ff9800;
+  margin: 1rem 0 0.45rem;
+  font-weight: 600;
+}
+
+.note-content ol {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  text-align: left;
+}
+
+.note-content li {
+  color: rgba(235, 246, 255, 0.9);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: 0.85rem;
+}
+
+.note-content li a {
+  color: #81d4fa;
+  text-decoration: none;
+}
+
+.note-content li a:hover {
+  text-decoration: underline;
+}
+
+.install-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.install-panel {
+  background: rgba(16, 20, 28, 0.85);
+  border: 1px solid rgba(129, 212, 250, 0.2);
+  border-radius: 10px;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.install-panel h5,
+.install-panel h6 {
+  margin: 0 0 0.4rem;
+  color: #fcd34d;
+}
+
+.install-panel ol {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.install-panel li {
+  margin-bottom: 0.35rem;
+}
+
+/* タブスタイル（モバイル） */
+.install-tabs {
+  margin-top: 1rem;
+}
+
+.install-select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+
+.install-select-label {
+  font-size: 0.88rem;
+  color: rgba(235, 246, 255, 0.9);
+  font-weight: 600;
+}
+
+.install-select {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  border-radius: 10px;
+  border: 1px solid rgba(129, 212, 250, 0.2);
+  background: rgba(18, 22, 32, 0.96);
+  color: #fff;
+  font-size: 0.92rem;
+  appearance: none;
+  outline: none;
+}
+
+.tab-content {
+  background: rgba(16, 20, 28, 0.65);
+  border: 1px solid rgba(129, 212, 250, 0.2);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel h5,
+.tab-panel h6 {
+  margin: 0 0 0.5rem;
+  color: #fcd34d;
+}
+
+.tab-panel ol {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.tab-panel li {
+  margin-bottom: 0.3rem;
+}
+
+/* ツールセクション */
+.tool-section {
+  animation: fadeIn 0.4s ease-out;
+  display: block;
+}
+
+.tool-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 古い拡張機能リスト（後方互換用） */
+.extensions-list {
+  display: none;
+}
+
+.extension-item {
+  display: none;
+}
+
+/* サマリー（ヘッダー） */
+.extension-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.65rem 0.9rem;
+  user-select: none;
+  transition: all 0.3s ease;
+  background: rgba(19, 24, 33, 0.4);
+  border-bottom: 1px solid rgba(129, 212, 250, 0.1);
+}
+
+.extension-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.extension-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+/* 拡張機能アイコン */
+.extension-icon {
+  font-size: 1.3rem;
+  color: var(--clr-primary);
+  transition: all 0.3s ease;
+  min-width: 36px;
+  text-align: center;
+}
+
+/* レスポンシブ調整: 小さな画面でカードがはみ出さないようにする */
+.extensions-grid,
+.extension-card,
+.extension-content,
+.extension-actions {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+}
+
+/* 超小型画面向けの最適化 (360px以下) */
+@media (max-width: 360px) {
+  .extensions-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  
+  .extension-card {
+    min-height: 140px;
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+  
+  .extension-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+
+  
+  .extension-btn {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.75rem;
+    width: 85%;
+  }
+}
+
+.extension-item[open] .extension-icon {
+  color: var(--clr-accent);
+  transform: scale(1.1);
+}
+
+/* 拡張機能タイトル */
+.extension-title {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--clr-text);
+  font-family: var(--font-heading);
+  transition: all 0.3s ease;
+}
+
+/* トグルアイコン */
+.extension-toggle {
+  font-size: 1rem;
+  color: var(--clr-primary);
+  transition: all 0.3s ease;
+  min-width: 25px;
+  text-align: center;
+}
+
+.extension-item[open] .extension-toggle {
+  color: var(--clr-accent);
+  transform: rotate(180deg);
+}
+
+/* 詳細コンテンツ */
+.extension-content {
+  padding: 0 1rem 1rem 1rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.extension-content p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
