@@ -71,12 +71,14 @@
 
 /* tool-container 共通 */
 .tool-container {
-  max-width: 100%;
+  max-width: 95%;
   margin: 0 auto 2rem;
-  padding: 0.8rem 0.75rem;
+  padding: 1.5rem;
   background: transparent;
   border-radius: 0;
   border: none;
+  box-shadow: none;
+  backdrop-filter: none;
   box-sizing: border-box;
 }
 
@@ -108,7 +110,7 @@
 
 .command-card {
   background: var(--clr-card);
-  border: 1px solid rgba(129, 212, 250, 0.15);
+  border: 1px solid rgba(99, 230, 190, 0.55);
   border-radius: 16px;
   padding: 0.95rem;
   margin: 0 auto 0.9rem;

@@ -1,1 +1,1 @@
-サイト：https://logic-axis.github.io/page/
+サイト：https://freeze-axis.github.io/page/
