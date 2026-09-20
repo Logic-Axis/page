@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // bot.html（モード選択ページ）のみタイトルを動的に設定
   if (document.body.classList.contains('bot-page')) {
-    document.title = `LCAS公式サイト - ${cfg.pageTitle}`;
+    document.title = `つっくん帝国公式サイト - ${cfg.pageTitle}`;
     document.querySelector('.page-title').textContent = cfg.pageTitle;
   }
 

@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const yearDisplay = document.getElementById('year-display');
         if (yearDisplay) {
           const currentYear = new Date().getFullYear();
-          yearDisplay.textContent = `©LCAS ${currentYear}`;
+          yearDisplay.textContent = `©つっくん帝国 ${currentYear}`;
         }
       })
       .catch(err => {
